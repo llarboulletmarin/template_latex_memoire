@@ -1,0 +1,67 @@
+\chaptercustomnumber{Partie (Exemples)}
+Dans cette partie, je vous fournis quelques exemples utiles de \LaTeX{} que vous pouvez réutiliser facilement.
+
+\section{Citations et références}\label{sec:citations-and-references}
+
+Ici, je parle d'un excellent article\cite{imaginary_proceedings}. Et il y a aussi d'excellents actes de conférence\cite{imaginary_article}.
+
+\section{Figures}\label{sec:figures}
+
+Voici un exemple d'environnement de figure :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.3\textwidth]{images/development/part_1/example}}
+    \caption{Ceci est une description de figure}
+    \label{fig:figure-example}
+\end{figure}
+
+Ceci est une référence à la figure~\ref{fig:figure-example}.
+
+\section{Autres références}\label{sec:other-references}
+
+\subsection{Listes d'éléments}\label{subsec:item-lists}
+
+Ceci est une liste d'éléments :
+
+\begin{itemize}
+    \item Élément 1
+    \item Élément 2
+    \item Élément 3
+\end{itemize}
+
+\subsection{Notes de bas de page}\label{subsec:footnotes}
+
+Ceci est une note de bas de page\footnote{contenu de la note de bas de page}.
+
+\subsection{Tabulaire}\label{subsec:tabular}
+
+Ceci est un tabulaire :
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|r|}
+        \hline
+        \rowcolor{white!75!black} \textbf{Colonne 1} & \textbf{Colonne 2} & \textbf{Colonne 3} \\
+        \hline
+        Aligné à gauche  & centré & Aligné à droite \\
+        \hline
+        & & \\
+        \hline
+    \end{tabular}
+    \caption{Votre légende ici}
+    \label{tab:your_label}
+\end{table}
+
+\subsection{Maths}\label{subsec:maths}
+
+Ceci est une formule mathématique : $a^2 + b^2 = c^2$.
+
+\subsection{Code}\label{subsec:code}
+
+Ceci est un extrait de code :
+
+\begin{verbatim}
+    def ma_fonction():
+        print("Bonjour le monde!")
+\end{verbatim}

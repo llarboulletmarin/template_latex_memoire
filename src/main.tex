@@ -1,0 +1,65 @@
+%! Author = Luca LARBOULLET-MARIN
+
+\documentclass[paper,11pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.25cm, right=2.25cm]{geometry}
+\usepackage[cyr]{aeguill}
+\usepackage{boldline,multirow,tabularx,colortbl,diagbox,makecell,fancybox}
+\usepackage{amsfonts,amssymb,amsmath,mathrsfs,array,stmaryrd}
+\usepackage{pgf,tikz,xcolor}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage[titles]{tocloft}
+\usepackage[compact]{titlesec,lipsum}
+\usepackage{wasysym}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage[square]{natbib}
+
+\input{params/commands}
+\input{params/layout}
+\input{params/variables}
+
+\begin{document}
+
+    \input{contents/cover/cover_page}
+    \input{contents/cover/cover_page_back}
+
+    \input{contents/preamble/acknowledgements}\pagenumbering{Roman}\setcounter{page}{3}
+    \input{contents/preamble/privacy}
+    \input{contents/preamble/abstract_fr}
+    \input{contents/preamble/abstract_en}
+    \input{contents/preamble/glossary}
+
+    \listoffigures\addcontentsline{toc}{chapter}{Liste des figures}
+    \listoftables\addcontentsline{toc}{chapter}{Liste des tableaux}
+    \tableofcontents
+
+    \input{contents/development/introduction}\pagenumbering{arabic}\setcounter{page}{1}
+
+    \pagestyle{fancy}
+    \renewcommand{\headrulewidth}{0.5pt}
+    \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+    \fancyhead[L]{\leftmark}
+
+    \input{contents/development/part_1}
+    \input{contents/development/part_2}
+    \input{contents/development/part_3}
+
+    \pagestyle{plain}
+
+    \input{contents/development/conclusion}
+    \input{contents/appendices/appendices}
+
+    \bibliographystyle{IEEEtran}
+    \bibliography{bibliography}
+    \addcontentsline{toc}{chapter}{Bibliographie}
+
+\end{document}

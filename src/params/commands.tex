@@ -1,0 +1,10 @@
+\newcommand\tab[1][0.6cm]{\hspace*{\#1}}
+\newcommand{\chaptercustom}[1]{\chapter*{#1}\label{ch:#1}\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\chaptercustomnumber}[1]{\chapter{#1}\label{ch:#1}}
+\newcommand{\sectioncustom}[1]{\section*{#1}\label{sec:#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\subsectioncustom}[1]{\subsection*{#1}\label{subsec:#1}\addcontentsline{toc}{subsection}{#1}}
+\newcommand{\subsubsectioncustom}[1]{\subsubsection*{#1}\label{subsubsec:#1}\addcontentsline{toc}{subsubsection}{#1}}
+
+\renewcommand\thesection{\thechapter.\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
